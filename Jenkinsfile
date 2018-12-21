@@ -11,10 +11,13 @@ pipeline {
     stages {
       stage("Test"){
         steps {
+          sh 'set +x'
           sh 'pwd'
           sh 'ls -l'
           sh 'uname -a'
           sh 'docker ps -a'
+          sh 'whoami'
+          sh 'echo $JENKINS_DATA'
         }
       }
     }
