@@ -17,7 +17,6 @@ pipeline {
             sh 'ls -lah /'
             sh 'cd ~ ; pwd'
             sh 'cat /etc/passwd'
-            sh 'top'
             sh 'uname -a'
             sh 'docker ps -a'
             sh 'whoami'
