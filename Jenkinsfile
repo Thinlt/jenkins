@@ -11,13 +11,17 @@ pipeline {
     stages {
       stage("Test"){
         steps {
-          sh 'set +x'
-          sh 'pwd'
-          sh 'ls -l'
-          sh 'uname -a'
-          sh 'docker ps -a'
-          sh 'whoami'
-          sh 'echo $JENKINS_DATA'
+            sh 'set +x'
+            sh 'pwd'
+            sh 'ls -l'
+            sh 'ls -lah /'
+            sh 'cd ~ ; pwd'
+            sh 'cat /etc/passwd'
+            sh 'top'
+            sh 'uname -a'
+            sh 'docker ps -a'
+            sh 'whoami'
+            sh 'echo $JENKINS_DATA'
         }
       }
     }
